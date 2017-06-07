@@ -1,0 +1,508 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.gordan.framework.fragment.HomeFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/ic_home_header">
+
+        <LinearLayout
+            android:id="@+id/ll_city"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北京"
+                android:id="@+id/tv_city"
+                android:layout_centerVertical="true"
+                android:textColor="#fff"  />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/city_down" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="442px"
+            android:layout_height="48px"
+            android:text="寻找课程，教练或机构..."
+            android:id="@+id/tv_search"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/ll_city"
+            android:textColor="#fff"
+            android:background="@drawable/search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_search"
+            android:layout_alignParentRight="true"
+            android:text="消息"
+            android:id="@+id/tv_message"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"  />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="1450px"
+        android:id="@+id/sv_index"
+        android:layout_below="@id/rl_header" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/relativeLayout">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" >
+                </android.support.v4.view.ViewPager>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/material_blue_grey_800"
+                    android:id="@+id/ll_indicate"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="#ffffffff"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+
+                        android:textColor="#ffffffff"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textColor="#ffffffff"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="#ffffffff"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textColor="#ffffffff"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <!-- 热门课程  -->
+
+            <LinearLayout
+                android:id="@+id/ll_hot_course"
+                android:orientation="horizontal"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hot_course"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1" >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="201px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_hot_course"  />
+
+                    <RelativeLayout
+                        android:layout_width="42dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_vertical"
+                        android:background="#ffffc130">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_hot_course_icon"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/ic_home_hot_course" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="热门课程"
+                            android:textSize="8sp"
+                            android:textColor="#fff"
+                            android:id="@+id/textView"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hot_course"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"        >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="201px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_hot_course" />
+
+
+                    <RelativeLayout
+                        android:layout_width="42dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_vertical"
+                        android:background="#ff605dff">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/ic_home_hot_course" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="热门课程"
+                            android:textSize="8sp"
+                            android:textColor="#fff"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/tl_menu"
+                android:layout_below="@+id/ll_hot_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+                <TableRow
+
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:layout_width="133px"
+                        android:layout_height="133px"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_ydah"
+                        android:id="@+id/imageView1" />
+
+                    <ImageView
+                        android:layout_width="133px"
+                        android:layout_height="133px"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_ydfl"
+                        android:id="@+id/imageView2" />
+
+
+                    <ImageView
+                        android:layout_width="133px"
+                        android:layout_height="133px"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_ydkc"
+                        android:id="@+id/imageView3" />
+
+                    <ImageView
+                        android:layout_width="133px"
+                        android:layout_height="133px"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_ydjg"
+                        android:id="@+id/imageView7" />
+                </TableRow>
+
+                <TableRow  android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="爱好定制" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="强体课程"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="运动教练"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="工作室"
+                        />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:layout_width="133px"
+                        android:layout_height="133px"
+                        android:layout_margin="10dp"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/ic_home_yhd" />
+
+                    <ImageView
+                        android:layout_width="133px"
+                        android:layout_height="133px"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_ysks"
+                        android:id="@+id/imageView5" />
+                    <ImageView
+                        android:layout_width="133px"
+                        android:layout_height="133px"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_jiaolian"
+                        android:id="@+id/imageView6" />
+
+                    <ImageView
+                        android:layout_width="133px"
+                        android:layout_height="133px"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_home_phb"
+                        android:id="@+id/imageView8" />
+
+                </TableRow>
+
+
+                <TableRow  android:gravity="center_horizontal"         >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="约活动"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="一扫开赛"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="排行榜"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="运动分类"            />
+
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_hot_course"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_hot_course_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:text="火爆课程"
+                            android:textStyle="bold"  />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_home_more" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="10px"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_home_lv_nrjl_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="10px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="#ffff622f">
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_hot_course_title"
+                    android:text="New Text"
+                    android:id="@+id/textView2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/rl_hot_coach"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"    >
+
+                <RelativeLayout
+                    android:id="@+id/rl_hot_coach_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:text="牛人教练.猜你喜欢"
+                            android:textStyle="bold"  />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_home_more" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="10px"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_home_lv_nrjl_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="10px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="#ffffe237">
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

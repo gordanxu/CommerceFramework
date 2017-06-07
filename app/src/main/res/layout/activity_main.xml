@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gordan.framework.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_alignParentTop="true" >
+
+    </FrameLayout>
+
+    <!--底部快速启动菜单 -->
+    <RadioGroup
+        android:id="@+id/rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/fragment"
+        android:layout_alignParentBottom="true" >
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_home"
+            android:text="首页"
+            android:gravity="center"
+            android:textColor="#E1660A"
+            android:checked="true"
+            android:id="@+id/rad_home" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_course"
+            android:button="@null"
+            android:gravity="center"
+            android:text="找培训"
+            android:id="@+id/rad_course" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_circle"
+            android:button="@null"
+            android:gravity="center"
+            android:text="运动圈"
+            android:id="@+id/rad_circle" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_member"
+            android:button="@null"
+            android:gravity="center"
+            android:text="我的强体"
+            android:id="@+id/rad_member" />
+
+    </RadioGroup>
+
+
+
+
+</RelativeLayout>
